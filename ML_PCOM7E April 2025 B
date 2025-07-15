@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Machine Learning Portfolio Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 2rem 1.5rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+    h1, h2, h3 {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #154890;
+    }
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.8rem; margin-top: 2.4rem; }
+    h3 { font-size: 1.3rem; margin-top: 2rem; }
+    ul, ol { margin-left: 2rem; }
+    pre {
+      background: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    a {
+      color: #1565c0;
+      text-decoration: underline;
+    }
+    .reference-list {
+      font-size: 0.98em;
+      color: #333;
+      padding-left: 1.5rem;
+    }
+    blockquote {
+      border-left: 4px solid #154890;
+      background: #f3f6fa;
+      margin: 1.5em 0;
+      padding: 1em 1.5em;
+      color: #444;
+    }
+    .section {
+      margin-bottom: 2.2em;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Machine Learning Portfolio Report</h1>
+  
+  <section class="section">
+    <h2>Collaborative Discussion 1: The 4th Industrial Revolution</h2>
+    <p>
+      Recent literature describes a shift from the efficiency-driven and automated focus of Industry 4.0 to the more human-centric and ethical principles that define Industry 5.0. The analysis of the Marks & Spencer cyberattack in the UK demonstrates how rapid adoption of centralized digital systems can create significant vulnerabilities and lead to large-scale disruption (Gallagher, 2025; Ravikumar & Young, 2025). Such incidents not only impact operations and finances but also diminish customer trust (Mittelstadt & Floridi, 2017). These events highlight the need to prioritize risk management, transparency, and human oversight alongside technological advancement (Heuser & Wang, 2021; Metcalf, 2024).
+    </p>
+    <p>
+      Industry 5.0 is presented as a rethinking of the relationship between technology and people, rather than a simple upgrade. The expectation is that future systems will be adaptable, ethical, and resilient to cyber threats. This includes integrating explainable, AI-driven security mechanisms and involving employees directly in risk detection and response, especially as IoT devices and human-AI interfaces expand the system's complexity and vulnerability (Santos et al., 2024; Rožanec et al., 2023).
+    </p>
+    <p>
+      Parallel developments are taking place in software testing and quality assurance, where artificial intelligence, machine learning, and big data analytics have increased efficiency and accuracy (Antony et al., 2022a; Alzahrani et al., 2021). However, these technologies also bring new ethical and security challenges. Frameworks such as DevSecOps and privacy-by-design are now seen as important for balancing innovation with responsible governance (Mack, 2023; Schwab, 2016).
+    </p>
+    <p>
+      In summary, current thinking suggests that technological progress should align with human values, ethics, and a sustained focus on security and public trust. Achieving the benefits of Industry 4.0 and 5.0 depends on maintaining this balance.
+    </p>
+    <h3>References</h3>
+    <ul class="reference-list">
+      <li>Alzahrani, B., Bahaitham, H., Andejany, M., Elshennawy, A. (2021). How ready is higher education for Quality 4.0 transformation according to the LNS research framework? <em>Sustainability</em>, 13(9), 5169.</li>
+      <li>Antony, J., Sony, M., Furterer, S., McDermott, O., Pepper, M. (2022a). Quality 4.0 conceptualisation and theoretical understanding: A global exploratory qualitative study. <em>TQM Journal</em>, 34(5), 1169–1188.</li>
+      <li><a href="https://www.bloomberg.com/news/articles/2025-04-24/cyber-incident-at-marks-spencer-continues-to-cause-disruption" target="_blank">Gallagher, R. (2025) Marks & Spencer Cybersecurity incident still causing disruption. Bloomberg.</a></li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0278612521002119" target="_blank">Heuser, V.- and B., & Wang, L., B., &. Wang, X (2021) Industry 4.0 and industry 5.0-inception, conception and perception. <em>Journal of Manufacturing Systems</em>.</a></li>
+      <li>Mack, S. D. (2023) The DevSecOps Playbook: Deliver Continuous Security at Speed. 1st edition. Newark: Wiley.</li>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-981-99-9730-5_1" target="_blank">Metcalf, G.S. (2024) An introduction to industry 5.0: History, Foundations, and futures. SpringerLink.</a></li>
+      <li>Mittelstadt, B. and Floridi, L. (2017) Why a right to explanation of automated decision-making does not exist in the General Data Protection Regulation. <em>International Data Privacy Law</em>, 7(2), 76-99.</li>
+      <li><a href="https://www.reuters.com/business/retail-consumer/uks-ms-says-customer-information-was-taken-cyber-attack-2025-05-13/" target="_blank">Ravikumar, S. and Young, S. (2025) UK’s M&S says customer data was taken in Cyber Attack. Reuters.</a></li>
+      <li>Rožanec, J.M., Novalija, I., Zajec, P., Kenda, K., Tavakoli Ghinani, H., Suh, S., Veliou, E., Papamartzivanos, D., Giannetsos, T., Menesidou, S.A. and Alonso, R. (2023). Human-centric artificial intelligence architecture for industry 5.0 applications. <em>International Journal of Production Research</em>, 61(20), 6847-6872.</li>
+      <li>Santos, B., Costa, R.L.C. and Santos, L. (2024, August). Cybersecurity in Industry 5.0: Open Challenges and Future Directions. In 2024 21st Annual International Conference on Privacy, Security and Trust (PST) (pp. 1-6). IEEE.</li>
+      <li>Schwab, K. (2016) The Fourth Industrial Revolution. Geneva: World Economic Forum.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Collaborative Discussion 2: Legal and Ethical Views on ANN Applications</h2>
+    <p>
+      Recent discussions in the literature and among practitioners highlight both the capabilities and limitations of AI-powered language models such as GPT-3. These tools can generate fluent, human-like text quickly and have practical value for administrative tasks, report drafting, and summarization, offering potential gains in efficiency and reduced workload (Zhou et al., 2020). In professional settings, these efficiencies can be valuable, and many workplaces may benefit from the adoption of such systems.
+    </p>
+    <p>
+      However, the use of AI writing tools in creative and educational contexts raises important concerns. Scholars note that language models do not possess genuine understanding; they operate by predicting the next word in a sequence based on vast training data, rather than any semantic or contextual grasp of meaning (Bender et al., 2021). This has implications for creative writing, where the distinction between authentic artistic expression and algorithmically generated text can be blurred, raising questions about the true value of AI-generated literature (Hutson, 2021).
+    </p>
+    <p>
+      Ethical issues are also prominent. Language models trained on internet-scale datasets can absorb and reproduce biases, stereotypes, and misinformation present in their source material, making them a potential vector for harm if used without careful oversight (Weidinger et al., 2021). There are growing calls for educational institutions and organizations to provide AI literacy training, implement clear usage policies, and ensure that human oversight is central to all creative or factual outputs generated by AI systems. Concerns over originality, consent, and data ownership in the creative industries further underscore the need for regulation and thoughtful integration of these technologies (Higgs & Stornaiuolo, 2024).
+    </p>
+    <p>
+      Other voices argue that with the right frameworks and human supervision, AI can enhance creativity, provide new perspectives, and support professional writing, provided its limitations are understood and ethical safeguards are in place. Ultimately, the consensus is that while AI writing tools can support efficiency and creativity, their use must be balanced by transparency, responsibility, and ongoing critical evaluation.
+    </p>
+    <h3>References</h3>
+    <ul class="reference-list">
+      <li>Bender, E.M., Gebru, T., McMillan-Major, A. and Shmitchell, S. (2021). On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, pp.610–623.</li>
+      <li>Higgs, J.M. and Stornaiuolo, A. (2024). Being Human in the Age of Generative AI: Young People’s Ethical Concerns about Writing and Living with Machines. Reading Research Quarterly, 59(4), 632–650.</li>
+      <li>Hutson, M. (2021). Robo-writers: the rise and risks of language-generating AI. Nature.</li>
+      <li>Weidinger, L., Uesato, J., Rae, J., Kassraie, B., Glaese, A., Biles, J., … and Gabriel, I. (2021). Ethical and social risks of harm from Language Models. arXiv preprint arXiv:2112.04359.</li>
+      <li>Zhou, K., Prabhumoye, S. and Neubig, G. (2020). Exploring Ethical and Social Implications of Language Models. arXiv preprint arXiv:2010.12884.</li>
+    </ul>
+  </section>
+  
+  <!-- Add further sections for other portfolio/report items as desired -->
+</main>
+</body>
+</html>
