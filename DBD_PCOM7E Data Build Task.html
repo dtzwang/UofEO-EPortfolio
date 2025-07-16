@@ -1,0 +1,9 @@
+<h2>Relational Database Normalization & Implementation</h2>
+<ul>
+  <li><b>Un-normalized data</b> with repeated groups was analyzed.</li>
+  <li>Data was converted to <b>First Normal Form (1NF)</b> by removing repeating groups and ensuring atomicity.</li>
+  <li>Data was further separated into <b>Second (2NF)</b> and <b>Third Normal Form (3NF)</b> by splitting into <b>Students</b>, <b>Courses</b>, and <b>ExamResults</b> tables to remove partial and transitive dependencies.</li>
+  <li><b>Primary keys</b> assigned: <code>student_number</code> (Students), <code>course_name</code> (Courses), <code>(student_number, course_name)</code> (ExamResults).</li>
+  <li><b>Foreign keys</b> established in <code>ExamResults</code> to enforce referential integrity with <code>Students</code> and <code>Courses</code>.</li>
+  <li>Database tested: foreign key violations prevented invalid inserts/deletes, confirming referential integrity.</li>
+</ul>
