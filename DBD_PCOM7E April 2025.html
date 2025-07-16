@@ -1,0 +1,140 @@
+<h2>Normalization of Un-Normalized Data to 3NF</h2>
+
+<h3>Un-Normalized Table</h3>
+<p>
+The original data contains repeating groups, with each student potentially taking multiple courses but student info is only listed once per group:
+</p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Student Number</th><th>Student Name</th><th>Exam Score</th><th>Support</th><th>Date of Birth</th>
+    <th>Course Name</th><th>Exam Board</th><th>Teacher Name</th>
+  </tr>
+  <tr><td>1001</td><td>Bob Baker</td><td>78</td><td>No</td><td>2001-08-25</td><td>Computer Science</td><td>BCS</td><td>Mr Jones</td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td>Maths</td><td>EdExcel</td><td>Ms Parker</td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td>Physics</td><td>OCR</td><td>Mr Peters</td></tr>
+  <tr><td>1002</td><td>Sally Davies</td><td>55</td><td>Yes</td><td>1999-10-02</td><td>Maths</td><td>AQA</td><td>Ms Parker</td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td>Biology</td><td>WJEC</td><td>Mrs Patel</td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td>Music</td><td>AQA</td><td>Ms Daniels</td></tr>
+  <tr><td>1003</td><td>Mark Hanmill</td><td>90</td><td>No</td><td>1995-06-05</td><td>Computer Science</td><td>BCS</td><td>Mr Jones</td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td>Maths</td><td>EdExcel</td><td>Ms Parker</td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td>Physics</td><td>OCR</td><td>Mr Peters</td></tr>
+  <tr><td>1004</td><td>Anas Ali</td><td>70</td><td>No</td><td>1980-08-03</td><td>Maths</td><td>AQA</td><td>Ms Parker</td></tr>
+</table>
+
+<hr>
+
+<h3>First Normal Form (1NF)</h3>
+<ul>
+  <li>No repeating groups</li>
+  <li>Each cell has a single value</li>
+  <li>Each row is unique</li>
+</ul>
+<p>We fill in student data for every course row.</p>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Student Number</th><th>Student Name</th><th>Exam Score</th><th>Support</th><th>Date of Birth</th>
+    <th>Course Name</th><th>Exam Board</th><th>Teacher Name</th>
+  </tr>
+  <tr><td>1001</td><td>Bob Baker</td><td>78</td><td>No</td><td>2001-08-25</td><td>Computer Science</td><td>BCS</td><td>Mr Jones</td></tr>
+  <tr><td>1001</td><td>Bob Baker</td><td>78</td><td>No</td><td>2001-08-25</td><td>Maths</td><td>EdExcel</td><td>Ms Parker</td></tr>
+  <tr><td>1001</td><td>Bob Baker</td><td>78</td><td>No</td><td>2001-08-25</td><td>Physics</td><td>OCR</td><td>Mr Peters</td></tr>
+  <tr><td>1002</td><td>Sally Davies</td><td>55</td><td>Yes</td><td>1999-10-02</td><td>Maths</td><td>AQA</td><td>Ms Parker</td></tr>
+  <tr><td>1002</td><td>Sally Davies</td><td>55</td><td>Yes</td><td>1999-10-02</td><td>Biology</td><td>WJEC</td><td>Mrs Patel</td></tr>
+  <tr><td>1002</td><td>Sally Davies</td><td>55</td><td>Yes</td><td>1999-10-02</td><td>Music</td><td>AQA</td><td>Ms Daniels</td></tr>
+  <tr><td>1003</td><td>Mark Hanmill</td><td>90</td><td>No</td><td>1995-06-05</td><td>Computer Science</td><td>BCS</td><td>Mr Jones</td></tr>
+  <tr><td>1003</td><td>Mark Hanmill</td><td>90</td><td>No</td><td>1995-06-05</td><td>Maths</td><td>EdExcel</td><td>Ms Parker</td></tr>
+  <tr><td>1003</td><td>Mark Hanmill</td><td>90</td><td>No</td><td>1995-06-05</td><td>Physics</td><td>OCR</td><td>Mr Peters</td></tr>
+  <tr><td>1004</td><td>Anas Ali</td><td>70</td><td>No</td><td>1980-08-03</td><td>Maths</td><td>AQA</td><td>Ms Parker</td></tr>
+</table>
+
+<hr>
+
+<h3>Second Normal Form (2NF)</h3>
+<ul>
+  <li>Meets all 1NF rules</li>
+  <li>Removes partial dependencies (all non-key attributes depend on the full composite key)</li>
+</ul>
+<p>
+We split into three tables: Students, Courses, and Exam Results.
+</p>
+
+<b>Students</b>
+<table border="1" cellpadding="5">
+  <tr><th>Student Number</th><th>Student Name</th><th>Date of Birth</th><th>Support</th></tr>
+  <tr><td>1001</td><td>Bob Baker</td><td>2001-08-25</td><td>No</td></tr>
+  <tr><td>1002</td><td>Sally Davies</td><td>1999-10-02</td><td>Yes</td></tr>
+  <tr><td>1003</td><td>Mark Hanmill</td><td>1995-06-05</td><td>No</td></tr>
+  <tr><td>1004</td><td>Anas Ali</td><td>1980-08-03</td><td>No</td></tr>
+</table>
+<br>
+<b>Courses</b>
+<table border="1" cellpadding="5">
+  <tr><th>Course Name</th><th>Exam Board</th><th>Teacher Name</th></tr>
+  <tr><td>Computer Science</td><td>BCS</td><td>Mr Jones</td></tr>
+  <tr><td>Maths</td><td>EdExcel</td><td>Ms Parker</td></tr>
+  <tr><td>Physics</td><td>OCR</td><td>Mr Peters</td></tr>
+  <tr><td>Biology</td><td>WJEC</td><td>Mrs Patel</td></tr>
+  <tr><td>Music</td><td>AQA</td><td>Ms Daniels</td></tr>
+</table>
+<br>
+<b>Exam Results</b>
+<table border="1" cellpadding="5">
+  <tr><th>Student Number</th><th>Course Name</th><th>Exam Score</th></tr>
+  <tr><td>1001</td><td>Computer Science</td><td>78</td></tr>
+  <tr><td>1001</td><td>Maths</td><td>78</td></tr>
+  <tr><td>1001</td><td>Physics</td><td>78</td></tr>
+  <tr><td>1002</td><td>Maths</td><td>55</td></tr>
+  <tr><td>1002</td><td>Biology</td><td>55</td></tr>
+  <tr><td>1002</td><td>Music</td><td>55</td></tr>
+  <tr><td>1003</td><td>Computer Science</td><td>90</td></tr>
+  <tr><td>1003</td><td>Maths</td><td>90</td></tr>
+  <tr><td>1003</td><td>Physics</td><td>90</td></tr>
+  <tr><td>1004</td><td>Maths</td><td>70</td></tr>
+</table>
+
+<hr>
+
+<h3>Third Normal Form (3NF)</h3>
+<ul>
+  <li>Meets all 2NF rules</li>
+  <li>No transitive dependencies (non-key attributes do not depend on other non-key attributes)</li>
+</ul>
+<p>
+No further changes are required as the structure now ensures every non-key field is dependent only on the key, the whole key, and nothing but the key.
+</p>
+<p>
+<b>Final 3NF Tables:</b>
+</p>
+<b>Students</b>
+<table border="1" cellpadding="5">
+  <tr><th>Student Number</th><th>Student Name</th><th>Date of Birth</th><th>Support</th></tr>
+  <tr><td>1001</td><td>Bob Baker</td><td>2001-08-25</td><td>No</td></tr>
+  <tr><td>1002</td><td>Sally Davies</td><td>1999-10-02</td><td>Yes</td></tr>
+  <tr><td>1003</td><td>Mark Hanmill</td><td>1995-06-05</td><td>No</td></tr>
+  <tr><td>1004</td><td>Anas Ali</td><td>1980-08-03</td><td>No</td></tr>
+</table>
+<br>
+<b>Courses</b>
+<table border="1" cellpadding="5">
+  <tr><th>Course Name</th><th>Exam Board</th><th>Teacher Name</th></tr>
+  <tr><td>Computer Science</td><td>BCS</td><td>Mr Jones</td></tr>
+  <tr><td>Maths</td><td>EdExcel</td><td>Ms Parker</td></tr>
+  <tr><td>Physics</td><td>OCR</td><td>Mr Peters</td></tr>
+  <tr><td>Biology</td><td>WJEC</td><td>Mrs Patel</td></tr>
+  <tr><td>Music</td><td>AQA</td><td>Ms Daniels</td></tr>
+</table>
+<br>
+<b>Exam Results</b>
+<table border="1" cellpadding="5">
+  <tr><th>Student Number</th><th>Course Name</th><th>Exam Score</th></tr>
+  <tr><td>1001</td><td>Computer Science</td><td>78</td></tr>
+  <tr><td>1001</td><td>Maths</td><td>78</td></tr>
+  <tr><td>1001</td><td>Physics</td><td>78</td></tr>
+  <tr><td>1002</td><td>Maths</td><td>55</td></tr>
+  <tr><td>1002</td><td>Biology</td><td>55</td></tr>
+  <tr><td>1002</td><td>Music</td><td>55</td></tr>
+  <tr><td>1003</td><td>Computer Science</td><td>90</td></tr>
+  <tr><td>1003</td><td>Maths</td><td>90</td></tr>
+  <tr><td>1003</td><td>Physics</td><td>90</td></tr>
+  <tr><td>1004</td><td>Maths</td><td>70</td></tr>
+</table>
